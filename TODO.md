@@ -1,0 +1,2 @@
+- [x] Edit src/__tests__/Actors.test.jsx to add fetch mocking with beforeEach and afterEach blocks
+- [x] Run tests to verify they pass

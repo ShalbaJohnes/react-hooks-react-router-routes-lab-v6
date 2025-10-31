@@ -26,6 +26,16 @@ const actors = [
   },
 ];
 
+beforeEach(() => {
+  vi.spyOn(global, 'fetch').mockResolvedValue({
+    json: () => Promise.resolve(actors)
+  });
+});
+
+afterEach(() => {
+  vi.restoreAllMocks();
+});
+
 const router = createMemoryRouter(routes, {
   initialEntries: [`/actors`],
   initialIndex: 0
